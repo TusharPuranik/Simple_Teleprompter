@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teleprompter Application</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Teleprompter Application</h1>
+        <form action="/prompt" method="post">
+            <textarea name="text" placeholder="Enter your text here"></textarea>
+            <br>
+            <label for="speed">Speed:</label>
+            <input type="number" name="speed" id="speed" min="1" max="10" value="5">
+            <br>
+            <label for="size">Text Size:</label>
+            <input type="number" name="size" id="size" min="12" max="36" value="18">
+            <br>
+            <button type="submit">Start Teleprompter</button>
+        </form>
+    </div>
+</body>
+</html>
